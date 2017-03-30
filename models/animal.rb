@@ -36,26 +36,26 @@ class Animal
 
   def edit()
     sql = "UPDATE animals SET
-    name = '#{@name}'
-    type = '#{@type}'
-    breed = '#{@breed}'
-    bio = '#{@bio}'
-    ready_for_adoption = '#{@ready_for_adoption}'
-    adopted = '#{@adopted}'
-    adoption_date = '#{@adoption_date}'
-    admission_date = '#{@admission_date}'
+    name = '#{@name}',
+    type = '#{@type}',
+    breed = '#{@breed}',
+    bio = '#{@bio}',
+    ready_for_adoption = '#{@ready_for_adoption}',
+    adopted = '#{@adopted}',
+    adoption_date = '#{@adoption_date}',
+    admission_date = '#{@admission_date}',
     profile_picture = '#{@profile_picture}'
     WHERE id = '#{@id}'"
     SqlRunner.run(sql)
   end
 
   def delete()
-    sql = "DELETE FROM animals WHERE id=#{ @id }"
+    sql = "DELETE FROM animals WHERE id = #{@id}"
     SqlRunner.run( sql )
   end
 
   def self.find(id)
-    sql = "SELECT * FROM animals WHERE id= #{@id}"
+    sql = "SELECT * FROM animals WHERE id = #{@id}"
     animal = SqlRunner.run(sql)
     result = Animal.new(animal.first)
     return result
@@ -72,7 +72,5 @@ class Animal
     sql = "DELETE FROM animals"
     SqlRunner.run( sql )
   end
-
-
 
 end
