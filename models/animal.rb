@@ -20,7 +20,15 @@ class Animal
     sql = "INSERT INTO animals 
     (name, type, breed, bio, ready_for_adoption, adopted, adoption_date, admission_date, profile_picture)
     VALUES 
-    ('#{@name}', '#{@type}', '#{@breed}', '#{@bio}', '#{@ready_for_adoption}', '#{@adopted}', '#{@adoption_date}', '#{@admission_date}', '#{@profile_picture}')
+    ('#{@name}',
+    '#{@type}',
+    '#{@breed}',
+    '#{@bio}',
+    '#{@ready_for_adoption}',
+    '#{@adopted}',
+    '#{@adoption_date}',
+    '#{@admission_date}',
+    '#{@profile_picture}')
     RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
@@ -58,6 +66,11 @@ class Animal
     animals = SqlRunner.run(sql)
     result = animals.map { |animal| Animal.new(animal) }
     return result
+  end
+
+  def self.delete_all()
+    sql = "DELETE FROM animals"
+    SqlRunner.run( sql )
   end
 
 
