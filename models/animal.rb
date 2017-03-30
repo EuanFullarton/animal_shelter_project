@@ -41,5 +41,25 @@ class Animal
     SqlRunner.run(sql)
   end
 
+  def delete()
+    sql = "DELETE FROM animals WHERE id=#{ @id }"
+    SqlRunner.run( sql )
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM animals WHERE id= #{@id}"
+    animal = SqlRunner.run(sql)
+    result = Animal.new(animal.first)
+    return result
+  end
+
+  def self.all()
+    sql = "SELECT * FROM animals"
+    animals = SqlRunner.run(sql)
+    result = animals.map { |animal| Animal.new(animal) }
+    return result
+  end
+
+
 
 end
