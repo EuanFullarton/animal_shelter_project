@@ -17,12 +17,12 @@ get '/adoptions/new' do
 end
 
 post '/adoptions' do
-  adoption = Adoption.new(options)
+  adoption = Adoption.new(params)
   adoption.save
   redirect to("/adoptions")
 end
 
 post '/adoptions/:id/delete' do
-  Adoption.delete(options[:id])
+  Adoption.delete(params[:id])
   redirect to("/adoptions")
 end

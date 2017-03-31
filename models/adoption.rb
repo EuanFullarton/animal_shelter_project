@@ -5,7 +5,7 @@ class Adoption
   attr_reader(:id, :animal_id, :owner_id) 
 
   def initialize( options )
-    @id = nil || options['id'].to_i
+    @id = options['id'].to_i
     @animal_id = options['animal_id']
     @owner_id = options['owner_id']
   end
@@ -16,12 +16,6 @@ class Adoption
           RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i
-  end
-
-  def self.all()
-    sql = "SELECT * FROM adoptions"
-    results = SqlRunner.run( sql )
-    return results.map {|adoption| Adoption.new(adoption)}
   end
 
   def animal()
@@ -40,6 +34,17 @@ class Adoption
           WHERE owners.id = #{@owner_id}"
     results = SqlRunner.run( sql )
     return Owner.new( results.first )
+  end
+
+  def self.all()
+    sql = "SELECT * FROM adoptions"
+    results = SqlRunner.run( sql )
+    return results.map {|adoption| Adoption.new(adoption)}
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM adoptions WHERE id = #{id}"
+    SqlRunner.run( sql )
   end
 
   def self.delete_all
