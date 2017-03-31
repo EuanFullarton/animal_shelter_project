@@ -9,7 +9,6 @@ class Owner
     @id = nil || options['id'].to_i
     @name = options['name']
     @animals_owned = options['animals_owned']
-    @adoption_date = options['adoption_date']
     @bio = options['bio']
     @capacity_for_animals = options['capacity_for_animals']
     @looking_for = options['looking_for']
@@ -18,11 +17,10 @@ class Owner
 
   def save()
     sql = "INSERT INTO owners 
-    (name, animals_owned, adoption_date, bio, capacity_for_animals, looking_for, profile_picture)
+    (name, animals_owned, bio, capacity_for_animals, looking_for, profile_picture)
     VALUES 
     ('#{@name}',
     '#{@animals_owned}',
-    '#{@adoption_date}',
     '#{@bio}',
     '#{@capacity_for_animals}',
     '#{@looking_for}',
@@ -36,7 +34,6 @@ class Owner
     sql = "UPDATE owners SET
     name = '#{@name}',
     animals_owned = '#{@animals_owned}',
-    adoption_date = '#{@adoption_date}',
     bio = '#{@bio}',
     capacity_for_animals = '#{@capacity_for_animals}',
     looking_for = '#{@looking_for}',

@@ -7,7 +7,6 @@ CREATE TABLE owners
   id SERIAL4 PRIMARY KEY,
   name VARCHAR(255),
   animals_owned VARCHAR(255),
-  adoption_date VARCHAR(255),
   bio VARCHAR(255),
   capacity_for_animals INT2,
   looking_for VARCHAR(255),
