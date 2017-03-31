@@ -2,6 +2,8 @@ require_relative ('../db/sql_runner')
 
 class Animal
 
+  attr_reader(:id) 
+
   def initialize (options)
     @id = nil || options['id'].to_i
     @name = options['name']
@@ -10,9 +12,9 @@ class Animal
     @bio = options['bio']
     @ready_for_adoption = options['ready_for_adoption']
     @adopted = options['adopted']
-    @adoption_date['adoption_date']
-    @admission_date['admission_date']
-    @profile_picture['profile_picture']
+    @adoption_date = options['adoption_date']
+    @admission_date = options['admission_date']
+    @profile_picture = options['profile_picture']
 
   end
 
