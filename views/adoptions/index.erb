@@ -1,0 +1,18 @@
+<h1>Adoptions</h1>
+
+<p>
+  <a class="btn" href="/adoptions/new">New adoption</a>
+</p>
+
+<ul>
+  <% for adoption in @adoptions %>
+  <li>
+  <p><%= adoption.owner.name %> <%= adoption.animal.name %> </p>
+    <p>
+      <form action="/adoptions/<%= adoption.id %>/delete" method="POST">
+        <input class="btn" type="submit" value="delete" />
+      </form>
+    </p>
+  </li>
+  <% end %>
+</ul>

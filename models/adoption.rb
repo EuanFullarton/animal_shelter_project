@@ -27,8 +27,8 @@ class Adoption
   def animal()
     sql = "SELECT * FROM animals
           INNER JOIN adoptions
-          ON adoptions.animal_id = animal.id
-          WHERE animal.id = #{@animal_id}"
+          ON adoptions.animal_id = animals.id
+          WHERE animals.id = #{@animal_id}"
     results = SqlRunner.run(sql)
     return Animal.new( results.first )
   end
@@ -36,8 +36,8 @@ class Adoption
   def owner()
     sql = "SELECT * FROM owners
           INNER JOIN adoptions
-          ON adoptions.owner_id = owner.id
-          WHERE owner.id = #{@owner_id}"
+          ON adoptions.owner_id = owners.id
+          WHERE owners.id = #{@owner_id}"
     results = SqlRunner.run( sql )
     return Owner.new( results.first )
   end
