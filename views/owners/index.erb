@@ -2,19 +2,34 @@
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Name:</th>
     <th></th>
-    <th>Animals Owned</th>
+    <th>Animals Owned:</th>
     <th></th>
-    <th>Adoption Date</th>
+    <th>Bio:</th>
     <th></th>
-    <th>Bio</th>
-    <th></th>
-    <th>Capacity for animals</th>
+    <th>Capacity for animals:</th>
     <th></th>
     <th>Looking for...</th>
     <th></th>
-    <th>Profile Picture</th>
+    <th>Profile Picture:</th>
     <th></th>
-  </tr>
+</tr>
+<% for owner in @owners %>
+<tr>
+  <td><%= owner.name %></td>
+  <td>|</td>
+  <td><%= owner.animals_owned %></td>
+  <td>|</td>
+  <td><%= owner.bio %></td>
+  <td>|</td>
+  <td><%= owner.capacity_for_animals %></td>
+  <td>|</td>
+  <td><%= owner.looking_for %></td>
+  <td>|</td>
+  <td><img src = "<%= owner.profile_picture %>"/></td>
+
+  <td>|</td>
+  <% end %>
+</tr>
 </table>

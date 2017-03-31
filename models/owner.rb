@@ -2,7 +2,7 @@ require_relative ('../db/sql_runner')
 
 class Owner
 
-  attr_reader(:id, :name) 
+  attr_reader(:id, :name, :animals_owned, :bio, :capacity_for_animals, :looking_for, :profile_picture) 
 
 
   def initialize (options)
@@ -12,7 +12,7 @@ class Owner
     @bio = options['bio']
     @capacity_for_animals = options['capacity_for_animals']
     @looking_for = options['looking_for']
-    @profile_picture = ['profile_picture']
+    @profile_picture = options['profile_picture']
   end
 
   def save()
