@@ -1,0 +1,42 @@
+<table>
+  <tr>
+    <th>Name:</th>
+    <th></th>
+    <td><%= @animal.name %></td>   
+    <th>Type:</th>
+    <th></th>
+    <td><%= @animal.type %></td>
+    <th>Breed:</th>
+    <th></th>
+    <td><%= @animal.breed %></td>
+    <th>Bio:</th>
+    <th></th>
+    <td><%= @animal.bio %></td>
+    <th>Ready for adoption?</th>
+    <th></th>
+    <td class = "bool"><%= @animal.ready_for_adoption %></td>
+    <th>Adopted?</th>
+    <th></th>
+    <td class = "adopted"><%= @animal.adopted %></td>
+    <th>Adoption Date:</th>
+    <th></th>
+    <td><%= @animal.adoption_date %></td>
+    <th>Admission Date:</th>
+    <th></th>
+    <td><%= @animal.admission_date %></td>
+    <th>Profile Picture:</th>
+    <th></th>
+    <td><img src = "<%= @animal.profile_picture %>"/></td>
+  </tr><tr>
+  
+  <td><form action="/animals/<%= @animal.id %>/edit" method="get">
+    <input class="btn" type="submit" value="edit" />
+  </form></td>
+  <td>|</td>
+  <td>  <form action="/animals/<%= @animal.id %>/delete" method="POST">
+    <input class="btn" type="submit" value="delete" />
+  </form></td>
+  <td>|</td>
+</tr>
+
+</table>

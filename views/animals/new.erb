@@ -23,7 +23,7 @@
   <label for="ready_for_adoption">Ready for adoption?
     <select name="ready_for_adoption">
       <% for animal in @animals %>
-      <option value="<%= animal.id %>"><%= animal.ready_for_adoption %></option>
+      <option value="<%= animal.ready_for_adoption %>"><%= animal.ready_for_adoption %></option>
       <% end %>
     </select>
   </label>
@@ -32,18 +32,18 @@
   <label for="adopted">Adopted?
     <select name="adopted">
       <% for animal in @animals %>
-      <option value="<%= animal.id %>"><%= animal.adopted %></option>
+      <option value="<%= animal.adopted %>"><%= animal.adopted %></option>
       <% end %>
     </select>
   </label> 
   <br/>
   <br/>
-  <label for="adoption_date">Adoption date: </label>
-  <input id="adoption_date" type="text" name="adoption_date"/>
+  <label for="adoption_date">Adoption date (if applicable):</label>
+  <input id="adoption_date" type="date" name="adoption_date" min = "01/01/2000" max ="06/04/2017"/>
   <br/>
   <br/>
   <label for="admission_date">Admission date: </label>
-  <input id="admission_date" type="text" name="admission_date"/>
+  <input id="admission_date" type="date" name="admission_date"/>
   <br/>
   <br/>
   <label for="profile_picture">Profile picture link: </label>

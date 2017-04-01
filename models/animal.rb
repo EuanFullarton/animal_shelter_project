@@ -42,8 +42,8 @@ class Animal
     type = '#{@type}',
     breed = '#{@breed}',
     bio = '#{@bio}',
-    ready_for_adoption = '#{@ready_for_adoption}',
-    adopted = '#{@adopted}',
+    ready_for_adoption = #{@ready_for_adoption},
+    adopted = #{@adopted},
     adoption_date = '#{@adoption_date}',
     admission_date = '#{@admission_date}',
     profile_picture = '#{@profile_picture}'
@@ -51,13 +51,8 @@ class Animal
     SqlRunner.run(sql)
   end
 
-  def delete()
-    sql = "DELETE FROM animals WHERE id = #{@id}"
-    SqlRunner.run( sql )
-  end
-
   def self.find(id)
-    sql = "SELECT * FROM animals WHERE id = #{@id}"
+    sql = "SELECT * FROM animals WHERE id = #{id}"
     animal = SqlRunner.run(sql)
     result = Animal.new(animal.first)
     return result
@@ -68,6 +63,11 @@ class Animal
     animals = SqlRunner.run(sql)
     result = animals.map { |animal| Animal.new(animal) }
     return result
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM animals WHERE id = #{id}"
+    SqlRunner.run( sql )
   end
 
   def self.delete_all()

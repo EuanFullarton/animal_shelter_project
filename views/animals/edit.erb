@@ -1,0 +1,57 @@
+<form method="post" action="/animals/<%= @animal.id %>/edit">
+  <label for="name">Name: </label>
+  <input id="name" value = "<%= @animal.name %>" type="text" name="name"/>
+  <br/>
+  <br/>
+  <label for="type">Type:
+    <select name="type">
+      <% for animal in @animals %>
+      <option value = "Dog" <%= "selected" if @animal.type == "Dog" %></option>
+      <option value = "Cat" <%= "selected" if @animal.type == "Cat" %></option>
+      <% end %>
+    </select>
+  </label>
+  <br/>
+  <br/>
+  <label for="breed">Breed: </label>
+  <input id="breed" value = "<%= @animal.breed %>" type="text" name="breed">
+  <br/>
+  <br/>
+  <label for="bio">Bio: </label>
+  <input id="bio" value = "<%= @animal.bio %>" type="text" name="bio"/>
+  <br/>
+  <br/>
+  <label for="ready_for_adoption">Ready for adoption?
+    <select name="ready_for_adoption">
+      <% for animal in @animals %>
+      <option value = true <%= "selected" if @animal.ready_for_adoption == true %></option>
+      <option value = false <%= "selected" if @animal.ready_for_adoption == false %></option>
+      <% end %>
+    </select>
+  </label>
+  <br/>
+  <br/>
+  <label for="adopted">Adopted?
+    <select name="adopted">
+      <% for animal in @animals %>
+      <option value = true <%= "selected" if @animal.adopted == true %></option>
+      <option value = false <%= "selected" if @animal.adopted == false %></option>
+      <% end %>
+    </select>
+  </label> 
+  <br/>
+  <br/>
+  <label for="adoption_date">Adoption date (if applicable):</label>
+  <input id="adoption_date" value = "<%= @animal.adoption_date %>" type="date" name="adoption_date" min = "01/01/2000" max ="06/04/2017"/>
+  <br/>
+  <br/>
+  <label for="admission_date">Admission date: </label>
+  <input id="admission_date" value = "<%= @animal.admission_date %>" type="date" name="admission_date"/>
+  <br/>
+  <br/>
+  <label for="profile_picture">Profile picture link: </label>
+  <input id="profile_picture" value = "<%= @animal.profile_picture %>" type="text" name="profile_picture">
+  <br/>
+  <br/>
+  <input type="submit" value="Update Animal"/>
+</form>

@@ -7,7 +7,7 @@ require_relative( '../models/owner.rb' )
 
 get '/adoptions' do
   @adoptions = Adoption.all
-  erb ( :"adoptions/index" )
+  erb (:"adoptions/index")
 end
 
 get '/adoptions/new' do
@@ -22,7 +22,11 @@ post '/adoptions' do
   redirect to("/adoptions")
 end
 
+get '/adoptions/delete' do
+  erb(:"adoptions/delete")
+end
+
 post '/adoptions/:id/delete' do
   Adoption.delete(params[:id])
-  redirect to("/adoptions")
+  redirect to("/adoptions/delete")
 end

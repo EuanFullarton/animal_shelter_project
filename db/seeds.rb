@@ -46,7 +46,7 @@ animal1 = Animal.new({
   'ready_for_adoption' => true,
   'adopted' => false,
   'adoption_date' => 'N/A',
-  'admission_date' => '12/02/2017',
+  'admission_date' => '2017/02/12',
   'profile_picture' => 'https://is3-ssl.mzstatic.com/image/thumb/Purple20/v4/4b/9f/1f/4b9f1f55-149e-d720-9c18-47a4657813dd/source/256x256bb.jpg'
 })
 
@@ -57,8 +57,8 @@ animal2 = Animal.new({
   'bio' => 'Clarence is a lazy cat',
   'ready_for_adoption' => false,
   'adopted' => true,
-  'adoption_date' => '02/01/2016',
-  'admission_date' => '03/12/2015',
+  'adoption_date' => '2016/01/02',
+  'admission_date' => '2015/12/03',
   'profile_picture' => 'https://pbs.twimg.com/profile_images/710983778802409472/EdOHlXdK.jpg'
 })
 
@@ -69,8 +69,8 @@ animal3 = Animal.new({
   'bio' => 'Doug is a pug',
   'ready_for_adoption' => false,
   'adopted' => true,
-  'adoption_date' => '03/10/2014',
-  'admission_date' => '13/08/2014',
+  'adoption_date' => '2014/10/03',
+  'admission_date' => '2014/08/13',
   'profile_picture' => 'https://pbs.twimg.com/profile_images/662398361971105792/SOGHt_tL.jpg'
 })
 
@@ -82,7 +82,7 @@ animal4 = Animal.new({
   'ready_for_adoption' => true,
   'adopted' => false,
   'adoption_date' => 'N/A',
-  'admission_date' => '12/02/2017',
+  'admission_date' => '2017/02/12',
   'profile_picture' => 'http://siamesebreedersgroup.weebly.com/uploads/5/2/7/0/5270013/8451140.jpg?256'
 })
 
