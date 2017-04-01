@@ -3,8 +3,13 @@
   <input id="name" type="text" name="name"/>
   <br/>
   <br/>
-  <label for="type">Type: </label>
-  <input id="type" type="text" name="type"/>
+  <label for="type">Type:
+    <select name="type">
+      <% for animal in @animals %>
+      <option value="<%= animal.id %>"><%= animal.type %></option>
+      <% end %>
+    </select>
+  </label>
   <br/>
   <br/>
   <label for="breed">Breed: </label>
@@ -15,12 +20,22 @@
   <input id="bio" type="text" name="bio"/>
   <br/>
   <br/>
-  <label for="ready_for_adoption">Ready for adoption?: </label>
-  <input id="ready_for_adoption" type="boolean" name="ready_for_adoption"/>
+  <label for="ready_for_adoption">Ready for adoption?
+    <select name="ready_for_adoption">
+      <% for animal in @animals %>
+      <option value="<%= animal.id %>"><%= animal.ready_for_adoption %></option>
+      <% end %>
+    </select>
+  </label>
   <br/>
   <br/>
-  <label for="adopted">Adopted?: </label>
-  <input id="adopted" type="boolean" name="adopted">
+  <label for="adopted">Adopted?
+    <select name="adopted">
+      <% for animal in @animals %>
+      <option value="<%= animal.id %>"><%= animal.adopted %></option>
+      <% end %>
+    </select>
+  </label> 
   <br/>
   <br/>
   <label for="adoption_date">Adoption date: </label>
