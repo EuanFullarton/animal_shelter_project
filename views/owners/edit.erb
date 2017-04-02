@@ -1,0 +1,35 @@
+<form method="post" action="/owners">
+  <label for="name">Name: </label>
+  <input id="name" value = "<%= @owner.name %>" type="text" name="name"/>
+  <br/>
+  <br/>
+  <label for="animals_owned">Animals Owned: 
+      <select name="animals_owned">
+      <% for owner in @owners %>
+      <option value="<%= owner.animals_owned %>"><%= owner.animals_owned %></option>
+      <% end %>
+    </select>
+  </label>
+  <br/>
+  <br/>
+  <label for="bio">Bio: </label>
+  <input id="bio" value = "<%= @owner.bio %>" type="text" name="bio">
+  <br/>
+  <br/>
+  <label for="capacity_for_animals">Capacity for animals: </label>
+  <input id="capacity_for_animals" value = "<%= @owner.capacity_for_animals %>" type="number" name="capacity_for_animals"/>
+  <br/>
+  <br/>
+  <label for="looking_for">Looking for... </label>
+  <br/>
+  <br/>
+  <input id="looking_for1" type="checkbox" name="looking_for1" value = "Dog" <%= "checked" if @owner.looking_for == "Dog" %>> Dog
+  <input id="looking_for2" type="checkbox" name="looking_for2" value = "Cat" <%= "checked" if @owner.looking_for == "Cat" %>> Cat
+  <br/>
+  <br/>
+  <label for="profile_picture">Profile picture link: </label>
+  <input id="profile_picture" value = "<%= @owner.profile_picture %>" type="text" name="profile_picture">
+  <br/>
+  <br/>
+  <input type="submit" value="Update Owner"/>
+</form>

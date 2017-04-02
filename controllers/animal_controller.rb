@@ -28,7 +28,7 @@ get '/animals/:id/edit' do
 erb (:"animals/edit")
 end
 
-post '/animals/:id/' do
+post '/animals/:id' do
   animal = Animal.new(params)
   animal.edit()
   erb(:"animals/confirm_edit")

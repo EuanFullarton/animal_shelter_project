@@ -42,13 +42,8 @@ class Owner
     SqlRunner.run(sql)
   end
 
-  def delete()
-    sql = "DELETE FROM owners WHERE id = #{@id}"
-    SqlRunner.run( sql )
-  end
-
   def self.find(id)
-    sql = "SELECT * FROM owners WHERE id = #{@id}"
+    sql = "SELECT * FROM owners WHERE id = #{id}"
     owner = SqlRunner.run(sql)
     result = Owner.new(owner.first)
     return result
@@ -59,6 +54,11 @@ class Owner
     owners = SqlRunner.run(sql)
     result = owners.map { |owner| Owner.new(owner) }
     return result
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM owners WHERE id = #{id}"
+    SqlRunner.run( sql )
   end
 
   def self.delete_all()

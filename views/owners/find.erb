@@ -1,0 +1,33 @@
+<table>
+  <tr>
+    <th>Name:</th>
+    <th></th>
+    <td><%= @owner.name %></td>   
+    <th>Animals Owned:</th>
+    <th></th>
+    <td><%= @owner.animals_owned %></td>
+    <th>Bio:</th>
+    <th></th>
+    <td><%= @owner.bio %></td>
+    <th>Capacity for animals:</th>
+    <th></th>
+    <td><%= @owner.capacity_for_animals %></td>
+    <th>Looking for...</th>
+    <th></th>
+    <td><%= @owner.looking_for %></td>
+    <th>Profile Picture:</th>
+    <th></th>
+    <td><img src = "<%= @owner.profile_picture %>"/></td>
+  </tr><tr>
+  
+  <td><form action="/owners/<%= @owner.id %>/edit" method="get">
+    <input class="btn" type="submit" value="edit" />
+  </form></td>
+  <td>|</td>
+  <td>  <form action="/owners/<%= @owner.id %>/delete" method="POST">
+    <input class="btn" type="submit" value="delete" />
+  </form></td>
+  <td>|</td>
+</tr>
+
+</table>

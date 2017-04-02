@@ -1,17 +1,16 @@
-<form method="post" action="/animals/<%= @animal.id %>/edit">
+<form method="post" action="/animals/<%= @animal.id %>">
   <label for="name">Name: </label>
   <input id="name" value = "<%= @animal.name %>" type="text" name="name"/>
   <br/>
   <br/>
-    <label for="type">Type:
-      <input id="cat" type="radio" name="type" value = "Cat" <%= "checked" if @animal.type == "Cat" %>> Cat
-      <input id="dog" type="radio" name="type" value = "Dog" <%= "checked" if @animal.type == "Dog" %>> Dog
-    </label>
+  <label for="type">Type:
+  <input id="cat" type="radio" name="type" value = "Cat" <%= "checked" if @animal.type == "Cat" %>/> Cat
+    <input id="dog" type="radio" name="type" value = "Dog" <%= "checked" if @animal.type == "Dog" %>/> Dog
   </label>
   <br/>
   <br/>
   <label for="breed">Breed: </label>
-  <input id="breed" value = "<%= @animal.breed %>" type="text" name="breed">
+  <input id="breed" value = "<%= @animal.breed %>" type="text" name="breed"/>
   <br/>
   <br/>
   <label for="bio">Bio: </label>
@@ -19,16 +18,14 @@
   <br/>
   <br/>
   <label for="ready_for_adoption">Ready for adoption?
-    <input id="yes" type="radio" name="ready?" value = "Yes"<%= "checked" if @animal.ready_for_adoption == "Yes" %>> Yes
-    <input id="no" type="radio" name="ready?" value = "No"<%= "checked" if @animal.ready_for_adoption == "No" %>> No
-  </label>
+    <input id="yes" type="radio" name="ready?" value = "Yes"<%= "checked" if @animal.ready_for_adoption == "Yes" %>/> Yes
+    <input id="no" type="radio" name="ready?" value = "No"<%= "checked" if @animal.ready_for_adoption == "No" %>/> No
   </label>
   <br/>
   <br/>
   <label for="adopted">Adopted?
-    <input id="yes" type="radio" name="adopted?" value = "Yes" <%= "checked" if @animal.adopted == "Yes" %>> Yes
-    <input id="no" type="radio" name="adopted?" value = "No"<%= "checked" if @animal.adopted == "No" %>> No
-  </label> 
+    <input id="yes" type="radio" name="adopted?" value = "Yes" <%= "checked" if @animal.adopted == "Yes" %>/> Yes
+    <input id="no" type="radio" name="adopted?" value = "No"<%= "checked" if @animal.adopted == "No" %>/> No
   </label> 
   <br/>
   <br/>
@@ -41,7 +38,7 @@
   <br/>
   <br/>
   <label for="profile_picture">Profile picture link: </label>
-  <input id="profile_picture" value = "<%= @animal.profile_picture %>" type="text" name="profile_picture">
+  <input id="profile_picture" value = "<%= @animal.profile_picture %>" type="text" name="profile_picture"/>
   <br/>
   <br/>
   <input type="submit" value="Update Animal"/>

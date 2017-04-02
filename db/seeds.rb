@@ -45,7 +45,7 @@ animal1 = Animal.new({
   'bio' => 'Rufus is a friendly labrador',
   'ready_for_adoption' => "Yes",
   'adopted' => "No",
-  'adoption_date' => nil,
+  'adoption_date' => "N/A",
   'admission_date' => "2017-02-12",
   'profile_picture' => 'https://is3-ssl.mzstatic.com/image/thumb/Purple20/v4/4b/9f/1f/4b9f1f55-149e-d720-9c18-47a4657813dd/source/256x256bb.jpg'
 })
@@ -81,7 +81,7 @@ animal4 = Animal.new({
   'bio' => 'Pierre is a Siamese cat of unclear origin',
   'ready_for_adoption' => "Yes",
   'adopted' => "No",
-  'adoption_date' => nil,
+  'adoption_date' => "N/A",
   'admission_date' => "2017-02-12",
   'profile_picture' => 'http://siamesebreedersgroup.weebly.com/uploads/5/2/7/0/5270013/8451140.jpg?256'
 })

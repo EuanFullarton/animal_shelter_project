@@ -20,6 +20,22 @@ post '/owners' do
   erb(:"owners/create")
 end
 
+get '/owners/:id' do
+  @owner = Owner.find(params[:id])
+  erb(:"owners/find")
+end
+
+get '/owners/:id/edit' do
+@owner = Owner.find(params[:id])
+erb (:"owners/edit")
+end
+
+post '/owners/:id/' do
+  owner = Owner.new(params)
+  owner.edit()
+  erb(:"owners/confirm_edit")
+end
+
 get '/owners/delete' do
   erb(:"owners/delete")
 end

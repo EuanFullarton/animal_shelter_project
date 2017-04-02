@@ -12,7 +12,7 @@ class Adoption
 
   def save()
     sql = "INSERT INTO adoptions (animal_id, owner_id) 
-          VALUES ('#{@animal_id}',#{@owner_id}) 
+          VALUES (#{@animal_id},#{@owner_id}) 
           RETURNING *"
     results = SqlRunner.run(sql)
     @id = results.first()['id'].to_i

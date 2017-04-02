@@ -42,8 +42,8 @@ class Animal
     type = '#{@type}',
     breed = '#{@breed}',
     bio = '#{@bio}',
-    ready_for_adoption = #{@ready_for_adoption},
-    adopted = #{@adopted},
+    ready_for_adoption = '#{@ready_for_adoption}',
+    adopted = '#{@adopted}',
     adoption_date = '#{@adoption_date}',
     admission_date = '#{@admission_date}',
     profile_picture = '#{@profile_picture}'
