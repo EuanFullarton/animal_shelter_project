@@ -4,11 +4,8 @@
   <br/>
   <br/>
   <label for="type">Type:
-    <select name="type">
-      <% for animal in @animals %>
-      <option value="<%= animal.id %>"><%= animal.type %></option>
-      <% end %>
-    </select>
+    <input id="cat" type="radio" name="type" value = "Cat"> Cat
+    <input id="dog" type="radio" name="type" value = "Dog"/> Dog
   </label>
   <br/>
   <br/>
@@ -21,20 +18,14 @@
   <br/>
   <br/>
   <label for="ready_for_adoption">Ready for adoption?
-    <select name="ready_for_adoption">
-      <% for animal in @animals %>
-      <option value="<%= animal.ready_for_adoption %>"><%= animal.ready_for_adoption %></option>
-      <% end %>
-    </select>
+    <input id="yes" type="radio" name="ready?" value = "Yes"> Yes
+    <input id="no" type="radio" name="ready?" value = "No"> No
   </label>
   <br/>
   <br/>
   <label for="adopted">Adopted?
-    <select name="adopted">
-      <% for animal in @animals %>
-      <option value="<%= animal.adopted %>"><%= animal.adopted %></option>
-      <% end %>
-    </select>
+    <input id="yes" type="radio" name="adopted?" value = "Yes"> Yes
+    <input id="no" type="radio" name="adopted?" value = "No"> No
   </label> 
   <br/>
   <br/>

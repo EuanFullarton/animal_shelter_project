@@ -20,8 +20,8 @@ CREATE TABLE animals
   type VARCHAR(255),
   breed VARCHAR(255),
   bio VARCHAR(255),
-  ready_for_adoption BOOLEAN,
-  adopted BOOLEAN,
+  ready_for_adoption VARCHAR(255),
+  adopted VARCHAR(255),
   adoption_date VARCHAR(255),
   admission_date VARCHAR(255),
   profile_picture VARCHAR(255)
