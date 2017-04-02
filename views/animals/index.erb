@@ -43,7 +43,7 @@
     <td>|</td>
     <td><%= animal.admission_date %></td>
     <td>|</td>
-    <td><img src = "<%= animal.profile_picture %>"/></td>
+    <td><a href = "/animals/<%= animal.id %>"><img src = "<%= animal.profile_picture %>"/></a></td>
     <td>|</td>
     <td>  <form action="/animals/<%= animal.id %>/edit" method="POST">
         <input class="btn" type="submit" value="edit" />
