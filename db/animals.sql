@@ -22,8 +22,8 @@ CREATE TABLE animals
   bio VARCHAR(255),
   ready_for_adoption VARCHAR(255),
   adopted VARCHAR(255),
-  adoption_date VARCHAR(255),
-  admission_date VARCHAR(255),
+  adoption_date DATE,
+  admission_date DATE,
   profile_picture VARCHAR(255)
 );
 

@@ -22,6 +22,8 @@
     <th></th>
     <th>Admission Date:</th>
     <th></th>
+    <th></th>
+    <th></th>
     <th>Profile Picture:</th>
     <th></th>
 </tr>
@@ -42,17 +44,11 @@
     <td><%= animal.adoption_date %></td>
     <td>|</td>
     <td><%= animal.admission_date %></td>
-    <td>|</td>
+    <td></td>
+    <td></td>
+    <td></td>
     <td><a href = "/animals/<%= animal.id %>"><img src = "<%= animal.profile_picture %>"/></a></td>
-    <td>|</td>
-    <td>  <form action="/animals/<%= animal.id %>/edit" method="POST">
-        <input class="btn" type="submit" value="edit" />
     </form></td>
-    <td>|</td>
-    <td>  <form action="/animals/<%= animal.id %>/delete" method="POST">
-        <input class="btn" type="submit" value="delete" />
-    </form></td>
-    <td>|</td>
     <% end %>
 
 </tr>

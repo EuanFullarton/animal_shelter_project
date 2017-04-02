@@ -3,13 +3,10 @@
   <input id="name" value = "<%= @animal.name %>" type="text" name="name"/>
   <br/>
   <br/>
-  <label for="type">Type:
-    <select name="type">
-      <% for animal in @animals %>
-      <option value = "Dog" <%= "selected" if @animal.type == "Dog" %></option>
-      <option value = "Cat" <%= "selected" if @animal.type == "Cat" %></option>
-      <% end %>
-    </select>
+    <label for="type">Type:
+      <input id="cat" type="radio" name="type" value = "Cat" <%= "checked" if @animal.type == "Cat" %>> Cat
+      <input id="dog" type="radio" name="type" value = "Dog" <%= "checked" if @animal.type == "Dog" %>> Dog
+    </label>
   </label>
   <br/>
   <br/>
@@ -22,22 +19,16 @@
   <br/>
   <br/>
   <label for="ready_for_adoption">Ready for adoption?
-    <select name="ready_for_adoption">
-      <% for animal in @animals %>
-      <option value = true <%= "selected" if @animal.ready_for_adoption == true %></option>
-      <option value = false <%= "selected" if @animal.ready_for_adoption == false %></option>
-      <% end %>
-    </select>
+    <input id="yes" type="radio" name="ready?" value = "Yes"<%= "checked" if @animal.ready_for_adoption == "Yes" %>> Yes
+    <input id="no" type="radio" name="ready?" value = "No"<%= "checked" if @animal.ready_for_adoption == "No" %>> No
+  </label>
   </label>
   <br/>
   <br/>
   <label for="adopted">Adopted?
-    <select name="adopted">
-      <% for animal in @animals %>
-      <option value = true <%= "selected" if @animal.adopted == true %></option>
-      <option value = false <%= "selected" if @animal.adopted == false %></option>
-      <% end %>
-    </select>
+    <input id="yes" type="radio" name="adopted?" value = "Yes" <%= "checked" if @animal.adopted == "Yes" %>> Yes
+    <input id="no" type="radio" name="adopted?" value = "No"<%= "checked" if @animal.adopted == "No" %>> No
+  </label> 
   </label> 
   <br/>
   <br/>
