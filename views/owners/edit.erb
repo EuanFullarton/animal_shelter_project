@@ -3,15 +3,6 @@
   <input id="name" value = "<%= @owner.name %>" type="text" name="name"/>
   <br/>
   <br/>
-  <label for="animals_owned">Animals Owned: 
-    <select name="animals_owned">
-      <% for owner in @owners %>
-      <option value="<%= owner.animals_owned %>"><%= owner.animals_owned %></option>
-      <% end %>
-    </select>
-  </label>
-  <br/>
-  <br/>
   <label for="bio">Bio: </label>
   <input id="bio" value = "<%= @owner.bio %>" type="text" name="bio">
   <br/>
