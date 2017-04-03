@@ -26,6 +26,8 @@ get '/owners/:id' do
 end
 
 get '/owners/:id/edit' do
+@owners = Owner.all()
+@animals = Animal.all()
 @owner = Owner.find(params[:id])
 erb (:"owners/edit")
 end
