@@ -16,8 +16,14 @@ get '/adoptions/new' do
   erb(:"adoptions/new")
 end
 
-post '/adoptions' do
+get '/adoptions/:id/preferred_adopt' do
   @animals = Animal.all
+  @owners = Owner.all
+  @owner = Owner.find(params[:id])
+  erb(:"adoptions/preferred_adopt")
+end
+
+post '/adoptions' do
   adoption = Adoption.new(params)
   adoption.save
   redirect to("/adoptions")
@@ -31,3 +37,4 @@ post '/adoptions/:id/delete' do
   Adoption.delete(params[:id])
   redirect to("/adoptions/delete")
 end
+
