@@ -27,6 +27,7 @@ post '/adoptions' do
   adoption = Adoption.new(params)
   animal = Animal.find(params["animal_id"])
   animal.adopt()
+  animal.unavailable()
   animal.edit()
   adoption.save
   redirect to("/adoptions")

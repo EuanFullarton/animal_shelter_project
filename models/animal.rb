@@ -56,6 +56,10 @@ class Animal
     @adopted = "Yes"
   end
 
+  def unavailable()
+    @ready_for_adoption = "Unavailable" 
+  end
+
   def adoption()
     sql = "SELECT * FROM adoptions WHERE animal_id = #{@id}"
     results = SqlRunner.run(sql)
