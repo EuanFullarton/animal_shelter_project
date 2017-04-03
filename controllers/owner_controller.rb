@@ -6,7 +6,7 @@ require_relative( '../models/animal.rb' )
 
 get '/owners' do
   @owners = Owner.all()
-  erb ( :"owners/index" )
+  erb (:"owners/index")
 end
 
 get '/owners/new' do
@@ -30,7 +30,7 @@ get '/owners/:id/edit' do
 erb (:"owners/edit")
 end
 
-post '/owners/:id/' do
+post '/owners/:id' do
   owner = Owner.new(params)
   owner.edit()
   erb(:"owners/confirm_edit")

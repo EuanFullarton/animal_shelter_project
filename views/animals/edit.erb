@@ -18,14 +18,14 @@
   <br/>
   <br/>
   <label for="ready_for_adoption">Ready for adoption?
-    <input id="yes" type="radio" name="ready?" value = "Yes"<%= "checked" if @animal.ready_for_adoption == "Yes" %>/> Yes
-    <input id="no" type="radio" name="ready?" value = "No"<%= "checked" if @animal.ready_for_adoption == "No" %>/> No
+    <input id="yes" type="radio" name="ready_for_adoption" value = "Yes" <%= "checked" if @animal.ready_for_adoption == "Yes" %>/> Yes
+    <input id="no" type="radio" name="ready_for_adoption" value = "No" <%= "checked" if @animal.ready_for_adoption == "No" %>/> No
   </label>
   <br/>
   <br/>
   <label for="adopted">Adopted?
-    <input id="yes" type="radio" name="adopted?" value = "Yes" <%= "checked" if @animal.adopted == "Yes" %>/> Yes
-    <input id="no" type="radio" name="adopted?" value = "No"<%= "checked" if @animal.adopted == "No" %>/> No
+    <input id="yes" type="radio" name="adopted" value = "Yes" <%= "checked" if @animal.adopted == "Yes" %>/> Yes
+    <input id="no" type="radio" name="adopted" value = "No"<%= "checked" if @animal.adopted == "No" %>/> No
   </label> 
   <br/>
   <br/>

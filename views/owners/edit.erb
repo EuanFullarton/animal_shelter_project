@@ -1,13 +1,10 @@
-<form method="post" action="/owners">
+<form method="post" action="/owners/<%= @owner.id %>">
   <label for="name">Name: </label>
   <input id="name" value = "<%= @owner.name %>" type="text" name="name"/>
   <br/>
   <br/>
   <label for="animals_owned">Animals Owned: 
-      <select name="animals_owned">
-      <% for owner in @owners %>
-      <option value="<%= owner.animals_owned %>"><%= owner.animals_owned %></option>
-      <% end %>
+    <select name="animals_owned">
     </select>
   </label>
   <br/>
@@ -28,7 +25,7 @@
   <br/>
   <br/>
   <label for="profile_picture">Profile picture link: </label>
-  <input id="profile_picture" value = "<%= @owner.profile_picture %>" type="text" name="profile_picture">
+  <input id="profile_picture" value = "<%= @owner.profile_picture %>" type="text" name="profile_picture"/>
   <br/>
   <br/>
   <input type="submit" value="Update Owner"/>
