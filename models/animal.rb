@@ -5,7 +5,7 @@ class Animal
   attr_reader(:id, :name, :type, :breed, :bio, :ready_for_adoption, :adopted, :adoption_date, :admission_date, :profile_picture) 
 
   def initialize (options)
-    @id = nil || options['id'].to_i
+    @id = options['id'].to_i
     @name = options['name']
     @type = options['type']
     @breed = options['breed']
@@ -67,12 +67,12 @@ class Animal
 
   def self.delete(id)
     sql = "DELETE FROM animals WHERE id = #{id}"
-    SqlRunner.run( sql )
+    SqlRunner.run(sql)
   end
 
   def self.delete_all()
     sql = "DELETE FROM animals"
-    SqlRunner.run( sql )
+    SqlRunner.run(sql)
   end
 
 end

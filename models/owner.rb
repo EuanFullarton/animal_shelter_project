@@ -6,7 +6,7 @@ class Owner
 
 
   def initialize (options)
-    @id = nil || options['id'].to_i
+    @id = options['id'].to_i
     @name = options['name']
     @animals_owned = options['animals_owned']
     @bio = options['bio']

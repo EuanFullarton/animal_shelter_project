@@ -4,7 +4,6 @@ require_relative( '../models/animal.rb' )
 
 get '/animals' do
   @animals = Animal.all()
-  @animals
   erb (:"animals/index")
 end
 
@@ -35,11 +34,7 @@ post '/animals/:id' do
   erb(:"animals/confirm_edit")
 end
 
-get '/animals/delete' do
-  erb(:"animals/delete")
-end
-
 post '/animals/:id/delete' do
   Animal.delete(params[:id])
-  redirect to("/animals/delete")
+  erb(:"animals/delete")
 end

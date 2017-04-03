@@ -38,11 +38,7 @@ post '/owners/:id' do
   erb(:"owners/confirm_edit")
 end
 
-get '/owners/delete' do
-  erb(:"owners/delete")
-end
-
 post '/owners/:id/delete' do
   Owner.delete(params[:id])
-  redirect to("/owners/delete")
+  erb(:"owners/delete")
 end
