@@ -1,35 +1,37 @@
 <h1>Ready to adopt!</h1>
 
- <p>
-   Owner:
- </p>
- <p>
-  <label value = "<%= @owner.id %>"> <%= @owner.name %></label>
-</p>
-
-
 <form action="/adoptions" method="post">
+  <p>
+    Owner:
+     <label>
+      <select name="owner_id">
+        <option value="<%= @owner.id %>"><%= @owner.name %></option>
+      </select>
+    </label>
 
- <p>
-  Select an animal:
-</p>
-<p>
-  <label>
-    <select name="animal_id">
-      <% for animal in @animals %>
-      <% if animal.ready_for_adoption == "Yes" && animal.type == @owner.looking_for %>
-      <option value="<%= animal.id %>"><%= animal.name %></option>
-      <% end %>
-      <% end %>
-    </select>
-  </label>
-</p>
 
-<p>
-  Adoption Date:
-</p>
-<input type="date">
-<br/>
-<br/>
-<input class="btn" type='submit' value="Adopt!">
+  </p>
+
+  <p>
+    Select an animal:
+  </p>
+  <p>
+    <label>
+      <select name="animal_id">
+        <% for animal in @animals %>
+        <% if animal.ready_for_adoption == "Yes" && animal.type == @owner.looking_for %>
+        <option value="<%= animal.id %>"><%= animal.name %></option>
+        <% end %>
+        <% end %>
+      </select>
+    </label>
+  </p>
+
+  <p>
+    Adoption Date:
+  </p>
+  <input type="date">
+  <br/>
+  <br/>
+  <input class="btn" type='submit' value="Adopt!">
 </form>
