@@ -17,6 +17,7 @@ get '/adoptions/new' do
 end
 
 post '/adoptions' do
+  @animals = Animal.all
   adoption = Adoption.new(params)
   adoption.save
   redirect to("/adoptions")
