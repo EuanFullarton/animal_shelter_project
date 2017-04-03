@@ -1,4 +1,5 @@
 require_relative ('../db/sql_runner')
+require_relative ('../models/adoption')
 
 class Animal
 
@@ -49,6 +50,16 @@ class Animal
     profile_picture = '#{@profile_picture}'
     WHERE id = '#{@id}'"
     SqlRunner.run(sql)
+  end
+
+  def adopt()
+    @adopted = "Yes"
+  end
+
+  def adoption()
+    sql = "SELECT * FROM adoptions WHERE animal_id = #{@id}"
+    results = SqlRunner.run(sql)
+    return Animal.new(results.first)
   end
 
   def self.find(id)

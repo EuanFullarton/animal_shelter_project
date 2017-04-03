@@ -41,14 +41,15 @@
     <td>|</td>
     <td class = "adopted"><%= animal.adopted %></td>
     <td>|</td>
-        <% if animal.adopted == "Yes" %>
-            <% for adoption in @adoptions %>
-            <td><%= adoption.adoption_date %></td>
-            <%end %>
-        <%end %>
-    <td>|</td>
-    <td><%= animal.admission_date %></td>
+    <% if animal.adopted == "Yes" %>
+    <td><%= animal.adoption.adoption_date %></td>
+    <%end %>
     <td></td>
+    <td></td>
+    <td>|</td>
+    <td></td>
+    <td><%= animal.admission_date %></td>
+    <td>|</td>
     <td></td>
     <td></td>
     <td><a href = "/animals/<%= animal.id %>"><img src = "<%= animal.profile_picture %>"/></a></td>

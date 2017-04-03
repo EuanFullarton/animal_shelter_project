@@ -6,8 +6,8 @@ class Adoption
 
   def initialize( options )
     @id = options['id'].to_i
-    @animal_id = options['animal_id']
-    @owner_id = options['owner_id']
+    @animal_id = options['animal_id'].to_i
+    @owner_id = options['owner_id'].to_i
     @adoption_date = options['adoption_date']
   end
 
@@ -41,6 +41,13 @@ class Adoption
     sql = "SELECT * FROM adoptions"
     results = SqlRunner.run( sql )
     return results.map {|adoption| Adoption.new(adoption)}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM adoptions WHERE id = #{id}"
+    adoption = SqlRunner.run(sql)
+    result = Adoption.new(adoption.first)
+    return result
   end
 
   def self.delete(id)
