@@ -31,5 +31,6 @@ CREATE TABLE adoptions
 (
   id SERIAL4 PRIMARY KEY,
   animal_id INT4 REFERENCES animals(id) ON DELETE CASCADE,
-  owner_id INT4 REFERENCES owners(id) ON DELETE CASCADE
+  owner_id INT4 REFERENCES owners(id) ON DELETE CASCADE,
+  adoption_date DATE
 );

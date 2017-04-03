@@ -11,7 +11,7 @@
   <img src= "<%= adoption.owner.profile_picture %>"/>
   <p>Adopted Animal: <%= adoption.animal.name %> </p>
   <img src= "<%= adoption.animal.profile_picture %>"/>
-  <p> Adopted on: <%= adoption.animal.adoption_date %></p>
+  <p> Adopted on: <%= adoption.adoption_date %></p>
     <p>
       <form action="/adoptions/<%= adoption.id %>/delete" method="POST">
         <input class="btn" type="submit" value="delete" />

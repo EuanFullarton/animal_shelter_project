@@ -37,19 +37,23 @@
     <td>|</td>
     <td><%= animal.bio %></td>
     <td>|</td>
-    <td class = "bool"><%= animal.ready_for_adoption %></td>
+    <td class = "ready"><%= animal.ready_for_adoption %></td>
     <td>|</td>
     <td class = "adopted"><%= animal.adopted %></td>
     <td>|</td>
-    <td><%= animal.adoption_date %></td>
+        <% if animal.adopted == "Yes" %>
+            <% for adoption in @adoptions %>
+            <td><%= adoption.adoption_date %></td>
+            <%end %>
+        <%end %>
     <td>|</td>
     <td><%= animal.admission_date %></td>
     <td></td>
     <td></td>
     <td></td>
     <td><a href = "/animals/<%= animal.id %>"><img src = "<%= animal.profile_picture %>"/></a></td>
-    </form></td>
-    <% end %>
+</form></td>
+<% end %>
 
 </tr>
 

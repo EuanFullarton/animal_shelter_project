@@ -1,9 +1,11 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/animal.rb' )
+require_relative( '../models/adoption.rb' )
 
 get '/animals' do
   @animals = Animal.all()
+  @adoptions = Adoption.all()
   erb (:"animals/index")
 end
 
