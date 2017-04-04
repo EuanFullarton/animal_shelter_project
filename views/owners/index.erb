@@ -1,9 +1,10 @@
-<h1>Owners</h1>
+<h1 class = "page_header">Owners</h1>
 <ul>
   <li>
-    <a href="/owners/new">Register New Owner</a>
+    <a class = "sub_links generic_sm" href="/owners/new">Register New Owner</a>
   </li>
 </ul>
+<div class = "owners">
 <table>
   <tr>
     <th>Name:</th>
@@ -36,9 +37,10 @@
     <td><%= owner.looking_for %></td>
     <td>|</td>
     <td><a href = "/owners/<%= owner.id %>"><img src = "<%= owner.profile_picture %>"/></a></td>
-    <td><a href = "/adoptions/<%= owner.id %>/preferred_adopt"><p>Choose from preferred animal type</p></a></td>
+    <td><a class = "sub_links" href = "/adoptions/<%= owner.id %>/preferred_adopt"><p>Choose from preferred animal type</p></a></td>
 
     <td>|</td>
     <% end %>
   </tr>
 </table>
+</div>

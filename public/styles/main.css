@@ -1,3 +1,21 @@
+a{
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 20px;
+  color: #ff9900;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover{
+  color:yellow;
+}
+
 .ready {
   color:red;
 }
@@ -6,8 +24,29 @@
   color:blue;
 }
 
-.adoptions {
-  background-color: rgba(255, 255, 255, 0.75)
+.page_header {
+  color:white;
+  font-size:20px;
+  text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.generic {
+  color:limegreen;
+  font-family: arial;
+  font-size:15px;
+  text-shadow: -.25px 0 black, 0 .25px black, .25px 0 black, 0 -.25px black;
+  background-color: rgba(255, 255, 255, 0.9);
+  width:400px;
+  border: 1px solid black;
+  border-radius:25px;
+  padding: 20px;
+}
+.generic_sm{
+background-color: rgba(255, 255, 255, 0.9);
+width:100px;
+border: 1px solid black;
+border-radius:25px;
+padding: 10px;
 }
 
 .welcome_header {
@@ -18,8 +57,12 @@
 
 .welcome {
   color:white;
+  font-size:25px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
+.disclaimer {
+  font-size: 15px;
 }
 
 div {
@@ -35,6 +78,39 @@ background-size: 100%;
 
 }
 
-table {
-  background-color: rgba(255, 255, 255, 0.75) 
+.animals {
+  background-color: rgba(255, 255, 255, 0.75);
+  overflow-y: scroll;
+  height:480px;
+  width:90%;
+  padding: 10px;
+}
+
+
+.owners {
+  background-color: rgba(255, 255, 255, 0.75);
+  overflow-y: scroll;
+  height:480px;
+  width:90%;
+  padding: 10px;
+}
+
+.adoptions {
+    background-color: rgba(255, 255, 255, 0.75);
+    overflow-y: scroll;
+    height:390px;
+    width:50%;
+    padding:10px;
+  }
+
+.profile {
+  background-color: rgba(255, 255, 255, 0.75);
+  overflow-y: scroll;
+  height:250px;
+  width:90%;
+}
+
+.sub_links {
+  color: #0099ff;
+  font-size: 15px;
 }

@@ -8,12 +8,12 @@ Owner.delete_all
 Animal.delete_all
 
 owner1 = Owner.new({
-  'name' => "Euan",
+  'name' => "Terry",
   'animals_owned' => ' ',
-  'bio' => 'Euan is a student who has always wanted a dog',
+  'bio' => 'Terry is a dog enthusiast',
   'capacity_for_animals' => 1,
   'looking_for' => 'Dog',
-  'profile_picture' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Stick_Figure.svg/170px-Stick_Figure.svg.png'
+  'profile_picture' => '/images/terry.jpg'
 })
 
 owner2 = Owner.new({
@@ -22,16 +22,16 @@ owner2 = Owner.new({
   'bio' => 'Percy loves cats',
   'capacity_for_animals' => 2,
   'looking_for' => 'Cat',
-  'profile_picture' => 'http://pix.iemoji.com/images/emoji/apple/ios-9/256/white-older-man.png'
+  'profile_picture' => '/images/percy.jpg'
 })
 
 owner3 = Owner.new({
   'name' => "Jemima",
   'animals_owned' => ' ',
-  'bio' => 'Jemima owns a farm and is looking for several animals',
+  'bio' => 'Jemima has lots of cats and is looking for more. Jemima has a problem.',
   'capacity_for_animals' => 6,
   'looking_for' => 'Cat',
-  'profile_picture' => 'https://thumbs.dreamstime.com/x/female-farmer-holding-pitchfork-bucket-20260568.jpg'
+  'profile_picture' => '/images/jemima.jpg'
 })
 
 owner1.save
@@ -45,9 +45,9 @@ animal1 = Animal.new({
   'bio' => 'Rufus is a friendly labrador',
   'ready_for_adoption' => "Yes",
   'adopted' => "No",
-  'adoption_date' => "N/A",
+  'adoption_date' => "",
   'admission_date' => "2017-02-12",
-  'profile_picture' => 'https://is3-ssl.mzstatic.com/image/thumb/Purple20/v4/4b/9f/1f/4b9f1f55-149e-d720-9c18-47a4657813dd/source/256x256bb.jpg'
+  'profile_picture' => '/images/rufus.jpg'
 })
 
 animal2 = Animal.new({
@@ -57,9 +57,9 @@ animal2 = Animal.new({
   'bio' => 'Clarence is a lazy cat',
   'ready_for_adoption' => "No",
   'adopted' => "No",
-  'adoption_date' => "2016-01-02",
+  'adoption_date' => "",
   'admission_date' => "2015-12-03",
-  'profile_picture' => 'https://pbs.twimg.com/profile_images/710983778802409472/EdOHlXdK.jpg'
+  'profile_picture' => '/images/clarence.jpg'
 })
 
 animal3 = Animal.new({
@@ -69,9 +69,9 @@ animal3 = Animal.new({
   'bio' => 'Doug is a pug',
   'ready_for_adoption' => "Yes",
   'adopted' => "No",
-  'adoption_date' => "2014-10-03",
+  'adoption_date' => "",
   'admission_date' => "2014-08-13",
-  'profile_picture' => 'https://pbs.twimg.com/profile_images/662398361971105792/SOGHt_tL.jpg'
+  'profile_picture' => '/images/doug.jpg'
 })
 
 animal4 = Animal.new({
@@ -81,9 +81,9 @@ animal4 = Animal.new({
   'bio' => 'Pierre is a Siamese cat of unclear origin',
   'ready_for_adoption' => "Yes",
   'adopted' => "No",
-  'adoption_date' => "N/A",
+  'adoption_date' => "",
   'admission_date' => "2017-02-12",
-  'profile_picture' => 'http://siamesebreedersgroup.weebly.com/uploads/5/2/7/0/5270013/8451140.jpg?256'
+  'profile_picture' => '/images/pierre.jpg'
 })
 
 animal1.save
