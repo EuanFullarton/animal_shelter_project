@@ -29,6 +29,11 @@ post '/adoptions' do
   animal.adopt()
   animal.unavailable()
   animal.edit()
+
+  owner = Owner.find(params["owner_id"])
+  owner.capacity()
+  owner.edit()
+
   adoption.save
   redirect to("/adoptions")
 end

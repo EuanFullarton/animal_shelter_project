@@ -10,7 +10,7 @@ class Owner
     @name = options['name']
     @animals_owned = options['animals_owned']
     @bio = options['bio']
-    @capacity_for_animals = options['capacity_for_animals']
+    @capacity_for_animals = options['capacity_for_animals'].to_i
     @looking_for = options['looking_for']
     @profile_picture = options['profile_picture']
   end
@@ -40,6 +40,10 @@ class Owner
     profile_picture = '#{@profile_picture}'
     WHERE id = '#{@id}'"
     SqlRunner.run(sql)
+  end
+
+  def capacity
+    @capacity_for_animals -= 1
   end
 
   # def owned_animal()
