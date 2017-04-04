@@ -8,7 +8,9 @@
    <label>
     <select name="owner_id">
       <% for owner in @owners %>
+      <% if owner.capacity_for_animals > 0 %>
       <option value="<%= owner.id %>"><%= owner.name %></option>
+      <% end %>
       <% end %>
     </select>
   </label>
