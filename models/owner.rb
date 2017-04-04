@@ -3,6 +3,7 @@ require_relative ('../db/sql_runner')
 class Owner
 
   attr_reader(:id, :name, :animals_owned, :bio, :capacity_for_animals, :looking_for, :profile_picture) 
+  attr_writer(:looking_for)
 
 
   def initialize (options)
