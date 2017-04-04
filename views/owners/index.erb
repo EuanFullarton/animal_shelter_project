@@ -2,7 +2,7 @@
 <ul>
   <li>
     <a href="/owners/new">Register New Owner</a>
-</li>
+  </li>
 </ul>
 <table>
   <tr>
@@ -18,23 +18,27 @@
     <th></th>
     <th>Profile Picture:</th>
     <th></th>
-</tr>
-<% for owner in @owners %>
-<tr>
-  <td><%= owner.name %></td>
-  <td>|</td>
-  <td><%= owner.animals_owned %></td>
-  <td>|</td>
-  <td><%= owner.bio %></td>
-  <td>|</td>
-  <td><%= owner.capacity_for_animals %></td>
-  <td>|</td>
-  <td><%= owner.looking_for %></td>
-  <td>|</td>
-  <td><a href = "/owners/<%= owner.id %>"><img src = "<%= owner.profile_picture %>"/></a></td>
-  <td><a href = "/adoptions/<%= owner.id %>/preferred_adopt"><p>Choose from preferred animal type</p></a></td>
+  </tr>
+  <% for owner in @owners %>
+  <tr>
+    <td><%= owner.name %></td>
+    <td>|</td>
+    <td>
+      <% owner.animals.each do |animal| %>
+      <p><%= animal.name %></p>
+      <% end %>
+    </td>
+    <td>|</td>
+    <td><%= owner.bio %></td>
+    <td>|</td>
+    <td><%= owner.capacity_for_animals %></td>
+    <td>|</td>
+    <td><%= owner.looking_for %></td>
+    <td>|</td>
+    <td><a href = "/owners/<%= owner.id %>"><img src = "<%= owner.profile_picture %>"/></a></td>
+    <td><a href = "/adoptions/<%= owner.id %>/preferred_adopt"><p>Choose from preferred animal type</p></a></td>
 
-  <td>|</td>
-  <% end %>
-</tr>
+    <td>|</td>
+    <% end %>
+  </tr>
 </table>

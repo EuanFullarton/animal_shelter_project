@@ -9,7 +9,7 @@ Animal.delete_all
 
 owner1 = Owner.new({
   'name' => "Euan",
-  'animals_owned' => 'None',
+  'animals_owned' => ' ',
   'bio' => 'Euan is a student who has always wanted a dog',
   'capacity_for_animals' => 1,
   'looking_for' => 'Dog',
@@ -18,7 +18,7 @@ owner1 = Owner.new({
 
 owner2 = Owner.new({
   'name' => "Percy",
-  'animals_owned' => 'None',
+  'animals_owned' => ' ',
   'bio' => 'Percy loves cats',
   'capacity_for_animals' => 2,
   'looking_for' => 'Cat',
@@ -27,7 +27,7 @@ owner2 = Owner.new({
 
 owner3 = Owner.new({
   'name' => "Jemima",
-  'animals_owned' => 'None',
+  'animals_owned' => ' ',
   'bio' => 'Jemima owns a farm and is looking for several animals',
   'capacity_for_animals' => 6,
   'looking_for' => 'Cat',
@@ -90,6 +90,8 @@ animal1.save
 animal2.save
 animal3.save
 animal4.save
+
+nil
 
 # adoption1 = Adoption.new({
 #   'animal_id' => animal2.id,

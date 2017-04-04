@@ -3,7 +3,7 @@ require_relative ('../db/sql_runner')
 class Owner
 
   attr_reader(:id, :name, :animals_owned, :bio, :capacity_for_animals, :looking_for, :profile_picture) 
-  attr_writer(:looking_for)
+  attr_writer(:looking_for, :animals_owned)
 
 
   def initialize (options)
@@ -51,8 +51,11 @@ class Owner
     @capacity_for_animals += 1
   end
 
-  # def owned_animal()
-  # end
+  def animals()
+    sql = "SELECT animals.* FROM animals INNER JOIN adoptions ON adoptions.animal_id = animals.id WHERE adoptions.owner_id = #{@id}"
+    animals = SqlRunner.run(sql)
+    return animals.map{|animal| Animal.new(animal)}
+  end
 
   def self.find(id)
     sql = "SELECT * FROM owners WHERE id = #{id}"

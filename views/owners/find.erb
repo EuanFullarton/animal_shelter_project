@@ -5,7 +5,11 @@
     <td><%= @owner.name %></td>   
     <th>Animals Owned:</th>
     <th></th>
-    <td><%= @owner.animals_owned %></td>
+    <td><%= @owner.animals_owned %>
+      <% @owner.animals.each do |animal| %>
+      <p><%= animal.name %></p>
+      <% end %>
+    </td>
     <th>Bio:</th>
     <th></th>
     <td><%= @owner.bio %></td>

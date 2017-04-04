@@ -16,10 +16,6 @@ end
 
 post '/owners' do
   @owner = Owner.new(params)
-  # looking_for = ""
-  # looking_for = params["looking_for_dog"] if params["looking_for_dog"]
-  # looking_for += params["looking_for_cat"] if params["looking_for_cat"]
-  # @owner.looking_for = looking_for
   @owner.save()
   erb(:"owners/create")
 end
