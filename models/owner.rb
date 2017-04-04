@@ -42,6 +42,9 @@ class Owner
     SqlRunner.run(sql)
   end
 
+  # def owned_animal()
+  # end
+
   def self.find(id)
     sql = "SELECT * FROM owners WHERE id = #{id}"
     owner = SqlRunner.run(sql)

@@ -56,8 +56,13 @@ class Animal
     @adopted = "Yes"
   end
 
+  def return()
+    @adopted = "No"
+    @ready_for_adoption = "Yes"
+  end
+
   def unavailable()
-    @ready_for_adoption = "Unavailable" 
+    @ready_for_adoption = " " 
   end
 
   def adoption()

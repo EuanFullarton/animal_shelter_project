@@ -38,7 +38,10 @@ get '/adoptions/delete' do
 end
 
 post '/adoptions/:id/delete' do
+  adoption = Adoption.find(params[:id])
+  animal = Animal.find(adoption.animal_id)
+  animal.return()
+  animal.edit()
   Adoption.delete(params[:id])
   redirect to("/adoptions/delete")
 end
-

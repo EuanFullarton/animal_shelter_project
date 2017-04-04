@@ -18,7 +18,7 @@ owner1 = Owner.new({
 
 owner2 = Owner.new({
   'name' => "Percy",
-  'animals_owned' => 'Clarence',
+  'animals_owned' => 'None',
   'bio' => 'Percy loves cats',
   'capacity_for_animals' => 2,
   'looking_for' => 'Cat',
@@ -27,7 +27,7 @@ owner2 = Owner.new({
 
 owner3 = Owner.new({
   'name' => "Jemima",
-  'animals_owned' => 'Doug',
+  'animals_owned' => 'None',
   'bio' => 'Jemima owns a farm and is looking for several animals',
   'capacity_for_animals' => 6,
   'looking_for' => 'Cat',
