@@ -1,4 +1,6 @@
+<% if @owner.capacity_for_animals > 0 %>
 <h1>Ready to adopt!</h1>
+
 
 <form action="/adoptions" method="post">
   <p>
@@ -35,3 +37,8 @@
   <br/>
   <input class="btn" type='submit' value="Adopt!">
 </form>
+
+<% else %>
+<h1> Adoption not possible... </h1>
+<p>This owner does not have space for any more animals!</p>
+<% end %>
