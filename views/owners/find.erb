@@ -8,6 +8,7 @@
     <td><%= @owner.animals_owned %>
       <% @owner.animals.each do |animal| %>
       <p><%= animal.name %></p>
+      <a href= "/animals/<%= animal.id %>"><img src="<%= animal.profile_picture %>"/></a>
       <% end %>
     </td>
     <th>Bio:</th>
