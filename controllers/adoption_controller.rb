@@ -47,6 +47,11 @@ post '/adoptions/:id/delete' do
   animal = Animal.find(adoption.animal_id)
   animal.return()
   animal.edit()
+
+  owner = Owner.find(adoption.owner_id)
+  owner.more_space()
+  owner.edit()
+
   Adoption.delete(params[:id])
   redirect to("/adoptions/delete")
 end
