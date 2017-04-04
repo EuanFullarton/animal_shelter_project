@@ -42,11 +42,11 @@ class Owner
     SqlRunner.run(sql)
   end
 
-  def capacity()
+  def capacity_down()
     @capacity_for_animals -= 1
   end
 
-  def more_space()
+  def capacity_up()
     @capacity_for_animals += 1
   end
 

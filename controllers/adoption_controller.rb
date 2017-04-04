@@ -31,7 +31,7 @@ post '/adoptions' do
   animal.edit()
 
   owner = Owner.find(params["owner_id"])
-  owner.capacity()
+  owner.capacity_down()
   owner.edit()
 
   adoption.save
@@ -45,11 +45,11 @@ end
 post '/adoptions/:id/delete' do
   adoption = Adoption.find(params[:id])
   animal = Animal.find(adoption.animal_id)
-  animal.return()
+  animal.return_to_shelter()
   animal.edit()
 
   owner = Owner.find(adoption.owner_id)
-  owner.more_space()
+  owner.capacity_up()
   owner.edit()
 
   Adoption.delete(params[:id])
