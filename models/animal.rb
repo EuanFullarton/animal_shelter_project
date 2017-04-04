@@ -52,6 +52,12 @@ class Animal
     SqlRunner.run(sql)
   end
 
+  def owner()
+    sql = "SELECT owners.* FROM owners INNER JOIN adoptions ON adoptions.owner_id = owners.id WHERE adoptions.animal_id = #{@id}"
+    owner = SqlRunner.run(sql)
+    return owner.first
+  end
+
   def adopt()
     @adopted = "Yes"
   end

@@ -38,15 +38,15 @@
     <td><%= animal.bio %></td>
     <td>|</td>
     <% if animal.adopted == "Yes" %>
-        <td><%= animal.unavailable %></td>
+    <td><%= animal.unavailable %></td>
     <% else %>
-        <td class = "ready"><%= animal.ready_for_adoption %></td>
+    <td class = "ready"><%= animal.ready_for_adoption %></td>
     <%end %>
     <td>|</td>
     <td class = "adopted"><%= animal.adopted %></td>
     <td>|</td>
     <% if animal.adopted == "Yes" %>
-        <td><%= animal.adoption.adoption_date %></td>
+    <td><%= animal.adoption.adoption_date %></td>
     <%end %>
     <td></td>
     <td></td>
