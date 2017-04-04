@@ -4,19 +4,17 @@
   <a class="btn" href="/adoptions/new">New forced adoption</a>
 </p>
 
-<ul>
+<div class = "adoptions">
   <% for adoption in @adoptions %>
-  <li>
-  <p>Owner: <%= adoption.owner.name %></p>
+  <p>Owner: <%= adoption.owner.name %>
   <img src= "<%= adoption.owner.profile_picture %>"/>
-  <p>Adopted Animal: <%= adoption.animal.name %> </p>
+  Adopted Animal: <%= adoption.animal.name %>
   <img src= "<%= adoption.animal.profile_picture %>"/>
-  <p> Adopted on: <%= adoption.adoption_date %></p>
+  Adopted on: <%= adoption.adoption_date %></p>
     <p>
       <form action="/adoptions/<%= adoption.id %>/delete" method="POST">
         <input class="btn" type="submit" value="delete" />
       </form>
     </p>
-  </li>
   <% end %>
-</ul>
+</div>

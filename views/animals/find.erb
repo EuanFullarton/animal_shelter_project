@@ -24,7 +24,9 @@
     <td class = "adopted"><%= @animal.adopted %></td>
     <th>Owner:</th>
     <th></th>
+    <% if @animal.adopted == "Yes" %>
     <td><%= @animal.owner["name"] %></td>
+    <% end %>
     <th></th>
     <th>Adoption Date:</th>
     <th></th>
