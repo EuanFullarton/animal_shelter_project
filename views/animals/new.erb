@@ -1,3 +1,6 @@
+<h1 class = "page_header">Register new animal!</h1>
+
+
 <form method="post" action="/animals">
   <label for="name">Name: </label>
   <input id="name" type="text" name="name"/>
@@ -14,12 +17,16 @@
   <br/>
   <br/>
   <label for="bio">Bio: </label>
-  <input id="bio" type="text" name="bio"/>
+  <input class = "bio" id="bio" type="text" name="bio"/>
   <br/>
   <br/>
   <label for="ready_for_adoption">Ready for adoption?
+  <br/>
+  <br/>
+  <tr>
     <input id="yes" type="radio" name="ready?" value = "Yes"> Yes
     <input id="no" type="radio" name="ready?" value = "No"> No
+    </tr>
   </label>
   <br/>
   <br/>

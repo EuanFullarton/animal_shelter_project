@@ -1,44 +1,41 @@
 <% if @owner.capacity_for_animals > 0 %>
-<h1>Choose from the preferred animal type for the owner!</h1>
+<h1 class = "page_header">Choose from the preferred animal type for the owner!</h1>
 
 
 <form action="/adoptions" method="post">
-  <p>
+  <label>
+
     Owner:
-     <label>
-      <select name="owner_id">
-        <option value="<%= @owner.id %>"><%= @owner.name %></option>
-      </select>
-    </label>
-
-
-  </p>
-
-  <p>
+    <br/>
+    <select name="owner_id">
+      <option value="<%= @owner.id %>"><%= @owner.name %></option>
+    </select>
+    <br/>
+  </label>
+  <br/>
+  <label>
     Select an animal:
-  </p>
-  <p>
-    <label>
-      <select name="animal_id">
-        <% for animal in @animals %>
-        <% if animal.ready_for_adoption == "Yes" && animal.type == @owner.looking_for %>
-        <option value="<%= animal.id %>"><%= animal.name %></option>
-        <% end %>
-        <% end %>
-      </select>
-    </label>
-  </p>
-
-  <p>
+    <br/>
+    <select name="animal_id">
+      <% for animal in @animals %>
+      <% if animal.ready_for_adoption == "Yes" && animal.type == @owner.looking_for %>
+      <option value="<%= animal.id %>"><%= animal.name %></option>
+      <% end %>
+      <% end %>
+    </select>
+  </label>
+  <br/>
+  <br/>
+  <label>
     Adoption Date:
-  </p>
-  <input name="adoption_date" type="date">
-  <br/>
-  <br/>
-  <input class="btn" type='submit' value="Adopt!">
-</form>
+    <br/>
+    <input name="adoption_date" type="date">
+    <br/>
+    <br/>
+    <input class="btn" type='submit' value="Adopt!">
+  </form>
 
-<% else %>
-<h1> Adoption not possible... </h1>
-<p>This owner does not have space for any more animals!</p>
-<% end %>
+  <% else %>
+  <h1> Adoption not possible... </h1>
+  <p>This owner does not have space for any more animals!</p>
+  <% end %>

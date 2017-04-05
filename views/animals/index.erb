@@ -50,9 +50,11 @@
     <td>|</td>
     <% if animal.adopted == "Yes" %>
     <td><%= animal.adoption.adoption_date %></td>
+    <td></td>
+    <% else %>
+    <td></td>
+    <td></td>
     <%end %>
-    <td></td>
-    <td></td>
     <td>|</td>
     <td></td>
     <td><%= animal.admission_date %></td>

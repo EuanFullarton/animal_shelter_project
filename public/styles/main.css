@@ -23,14 +23,29 @@ a:hover{
 }
 
 .page_header {
-  color:white;
+  color:  #b3ffff;
+  font-family: monospace;
   font-size:20px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.forced_header {
+  color:red;
+  font-family: monospace;
+  font-size: 25px;
   text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -.5px black;
+}
+
+.forced {
+  color:black;
+  font-family: monospace;
+  font-size: 15px;
+
 }
 
 .generic {
   color:limegreen;
-  font-family: arial;
+  font-family: monospace;
   font-size:15px;
   text-shadow: -.25px 0 black, 0 .25px black, .25px 0 black, 0 -.25px black;
   background-color: rgba(255, 255, 255, 0.9);
@@ -49,7 +64,7 @@ a:hover{
 
 .confirmation{
   color:green;
-  font-family: cursive;
+  font-family: monospace;
   background-color: rgba(255, 255, 255, 0.9);
   width:400px;
   border: 1px solid black;
@@ -59,18 +74,16 @@ a:hover{
 
 .welcome_header {
   color:yellow;
+  font-family: monospace;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   font-size: 50px;
 }
 
 .welcome {
   color:white;
+  font-family: monospace;
   font-size:25px;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.disclaimer {
-  font-size: 15px;
 }
 
 div {
@@ -94,6 +107,21 @@ body {
   padding: 10px;
   color:green;
   font-family: monospace;
+}
+
+label {
+  color:yellow;
+  font-family: monospace;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.capacity{
+  width:30px;
+}
+
+.bio {
+  height:50px;
+  width:200px;
 }
 
 
@@ -120,8 +148,8 @@ body {
 .profile {
   background-color: rgba(255, 255, 255, 0.75);
   overflow-y: scroll;
-  height:250px;
-  width:95%;
+  height:500px;
+  width:50%;
   color:green;
   font-family: monospace;
 }

@@ -1,58 +1,77 @@
 <div class = "profile">
-<table>
-  <tr>
-    <th>Name:</th>
-    <th></th>
-    <td><%= @animal.name %></td>   
-    <th>Type:</th>
-    <th></th>
-    <td><%= @animal.type %></td>
-    <th>Breed:</th>
-    <th></th>
-    <td><%= @animal.breed %></td>
-    <th>Bio:</th>
-    <th></th>
-    <td><%= @animal.bio %></td>
-    <th>Ready for adoption?</th>
-    <th></th>
-    <% if @animal.adopted == "Yes" %>
-    <td><%= @animal.unavailable %></td>
-    <% else %>
-    <td class = "ready"><%= @animal.ready_for_adoption %></td>
-    <%end %>
-    <th>Adopted?</th>
-    <th></th>
-    <td class = "adopted"><%= @animal.adopted %></td>
-    <th>Owner:</th>
-    <th></th>
-    <% if @animal.adopted == "Yes" %>
-    <td><%= @animal.owner["name"] %></td>
-    <% end %>
-    <th></th>
-    <th>Adoption Date:</th>
-    <th></th>
-    <% if @animal.adopted == "Yes" %>
-    <td><%= @animal.adoption.adoption_date %></td>
-    <%end %>
-    <th>Admission Date:</th>
-    <th></th>
-    <td><%= @animal.admission_date %></td>
-    <th>Profile Picture:</th>
-    <th></th>
-    <td><img src = "<%= @animal.profile_picture %>"/></td>
-  </tr><tr>
-  
-  <td><form action="/animals/<%= @animal.id %>/edit" method="get">
-    <input class="btn" type="submit" value="edit" />
-  </form></td>
-  <% if @animal.adopted == "No" %>
-  <td>|</td>
-  <td>  <form action="/animals/<%= @animal.id %>/delete" method="POST">
-    <input class="btn" type="submit" value="delete" />
-  </form></td>
-  <td>|</td>
-  <% end %>
-</tr>
+    <table cellspacing="10">
+      <tr>
+        <th>Name:</th>
+        <th></th>
+        <td><%= @animal.name %></td>  
+    </tr>
+    <tr>
+        <th>Type:</th>
+        <th></th>
+        <td><%= @animal.type %></td>
+    </tr>
+    <tr>
+        <th>Breed:</th>
+        <th></th>
+        <td><%= @animal.breed %></td>
+    </tr>
+    <tr>
+        <th>Bio:</th>
+        <th></th>
+        <td><%= @animal.bio %></td>
+    </tr>
+    <tr>
+        <th>Ready for adoption?</th>
+        <th></th>
+        <% if @animal.adopted == "Yes" %>
+        <td><%= @animal.unavailable %></td>
+        <% else %>
+        <td class = "ready"><%= @animal.ready_for_adoption %></td>
+        <%end %>
+    </tr>
+    <tr>
+        <th>Adopted?</th>
+        <th></th>
+        <td class = "adopted"><%= @animal.adopted %></td>
+    </tr>
+    <tr>
+        <th>Owner:</th>
+        <th></th>
+        <% if @animal.adopted == "Yes" %>
+        <td><%= @animal.owner["name"] %></td>
+        <% end %>
+        <th></th>
+    </tr>
+    <tr>
+        <th>Adoption Date:</th>
+        <th></th>
+        <% if @animal.adopted == "Yes" %>
+        <td><%= @animal.adoption.adoption_date %></td>
+        <%end %>
+    </tr>
+    <tr>
+        <th>Admission Date:</th>
+        <th></th>
+        <td><%= @animal.admission_date %></td>
+    </tr>
+    <tr>
+        <th>Profile Picture:</th>
+        <th></th>
+        <td><img src = "<%= @animal.profile_picture %>"/></td>
+    </tr>
+    
+    <tr>
+        <td><form action="/animals/<%= @animal.id %>/edit" method="get">
+            <input class="btn" type="submit" value="edit" />
+        </form></td>
+        </tr>
+        <tr>
+        <% if @animal.adopted == "No" %>
+        <td>  <form action="/animals/<%= @animal.id %>/delete" method="POST">
+            <input class="btn" type="submit" value="delete" />
+        </form></td>
+        <% end %>
+    </tr>
 
 </table>
 </div>

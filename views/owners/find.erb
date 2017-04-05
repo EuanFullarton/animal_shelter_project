@@ -1,42 +1,55 @@
 <div class = "profile">
-<table>
-  <tr>
-    <th>Name:</th>
-    <th></th>
-    <td><%= @owner.name %></td>   
-    <th>Animals Owned:</th>
-    <th></th>
-    <td>
-      <% @owner.animals_owned = @owner.animals.each do |animal| %>
-      <p><%= animal.name %></p>
-      <a href= "/animals/<%= animal.id %>"><img src="<%= animal.profile_picture %>"/></a>
-      <% end %>
-    </td>
-    <th>Bio:</th>
-    <th></th>
-    <td><%= @owner.bio %></td>
-    <th>Capacity for animals:</th>
-    <th></th>
-    <td><%= @owner.capacity_for_animals %></td>
-    <th>Looking for...</th>
-    <th></th>
-    <td><%= @owner.looking_for %></td>
-    <th>Profile Picture:</th>
-    <th></th>
-    <td><img src = "<%= @owner.profile_picture %>"/></td>
-  </tr><tr>
-  
-  <td><form action="/owners/<%= @owner.id %>/edit" method="get">
-    <input class="btn" type="submit" value="edit" />
-  </form></td>
-  <% if @owner.animals_owned == [] %>
-  <td>|</td>
-  <td>  <form action="/owners/<%= @owner.id %>/delete" method="POST">
-    <input class="btn" type="submit" value="delete" />
-  </form></td>
-  <td>|</td>
-  <% end %>
-</tr>
+  <table cellspacing="10">
+    <tr>
+      <th>Name:</th>
+      <th></th>
+      <td><%= @owner.name %></td>  
+    </tr>
+    <tr> 
+      <th>Animals Owned:</th>
+      <th></th>
+      <td>
+        <% @owner.animals_owned = @owner.animals.each do |animal| %>
+        <a href= "/animals/<%= animal.id %>"><img src="<%= animal.profile_picture %>"/></a><%= animal.name %>
 
-</table>
+        <br/>
+        <% end %>
+      </td>
+      <tr></tr>
+    </tr>
+    <tr>
+      <th>Bio:</th>
+      <th></th>
+      <td><%= @owner.bio %></td>
+    </tr>
+    <tr>
+      <th>Capacity for animals:</th>
+      <th></th>
+      <td><%= @owner.capacity_for_animals %></td>
+    </tr>
+    <tr>
+      <th>Looking for...</th>
+      <th></th>
+      <td><%= @owner.looking_for %></td>
+    </tr>
+    <tr>
+      <th>Profile Picture:</th>
+      <th></th>
+      <td><img src = "<%= @owner.profile_picture %>"/></td>
+    </tr>
+
+    <tr>
+      <td><form action="/owners/<%= @owner.id %>/edit" method="get">
+        <input class="btn" type="submit" value="edit" />
+      </form></td>
+    </tr>
+    <tr>
+      <% if @owner.animals_owned == [] %>
+      <td>  <form action="/owners/<%= @owner.id %>/delete" method="POST">
+        <input class="btn" type="submit" value="delete" />
+      </form></td>
+      <% end %>
+    </tr>
+
+  </table>
 </div>

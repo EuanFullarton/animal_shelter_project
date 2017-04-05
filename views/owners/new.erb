@@ -1,23 +1,27 @@
+<h1 class = "page_header">Register new owner!</h1>
+
+
 <form method="post" action="/owners">
   <label for="name">Name: </label>
   <input id="name" type="text" name="name"/>
   <br/>
   <br/>
   <label for="bio">Bio: </label>
-  <input id="bio" type="text" name="bio">
+  <input class = "bio" id="bio" type="text" name="bio" >
   <br/>
   <br/>
   <label for="capacity_for_animals">Capacity for animals: </label>
-  <input id="capacity_for_animals" type="number" name="capacity_for_animals"/>
+  <input class = "capacity" id="capacity_for_animals" type="number" name="capacity_for_animals"/>
   <br/>
   <br/>
-  <label for="looking_for">Looking for... </label>
+  <label for="looking_for">Looking for...
   <br/>
   <br/>
-  
-  <input id="looking_for_dog" type="radio" name="looking_for" value = "Dog"/> Dog
-  <input id="looking_for_cat" type="radio" name="looking_for" value = "Cat"/> Cat
-
+  <tr>
+  <input class id="looking_for_dog" type="radio" name="looking_for" value = "Dog"/> Dog
+  <input class id="looking_for_cat" type="radio" name="looking_for" value = "Cat"/> Cat
+  </tr>
+  </label>
   <br/>
   <br/>
   <label for="profile_picture">Profile picture link: </label>

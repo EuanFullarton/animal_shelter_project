@@ -1,13 +1,11 @@
-<h1>Forced Adoptions</h1>
-<h2>Choose any animal for any owner - it's this or the bin!</h2>
+<h1 class = "forced_header">Forced Adoptions</h1>
+<h2 class = "forced">Choose any animal for any owner - it's this or the bin!</h2>
 
 
 <form action="/adoptions" method="post">
-  <p>
+  <label>
     Select an owner:
-  </p>
   <p>
-   <label>
     <select name="owner_id">
       <% for owner in @owners %>
       <% if owner.capacity_for_animals > 0 %>
@@ -16,7 +14,7 @@
       <% end %>
     </select>
   </label>
-</p>
+  </p>
 
 <p>
   Select an animal:
