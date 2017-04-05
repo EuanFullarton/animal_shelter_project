@@ -73,7 +73,7 @@ class Owner
 
   def self.delete(id)
     sql = "DELETE FROM owners WHERE id = #{id}"
-    SqlRunner.run( sql )
+    SqlRunner.run(sql)
   end
 
   def self.delete_all()

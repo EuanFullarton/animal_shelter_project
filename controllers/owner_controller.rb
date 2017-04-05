@@ -39,11 +39,6 @@ post '/owners/:id' do
 end
 
 post '/owners/:id/delete' do
-  adoption = Adoption.find(params[:id])
-  animal = Animal.find(adoption.animal_id)
-  animal.return_to_shelter()
-  animal.edit()
-
   Owner.delete(params[:id])
   erb(:"owners/delete")
 end
