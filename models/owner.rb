@@ -36,7 +36,7 @@ class Owner
     name = '#{@name}',
     animals_owned = '#{@animals_owned}',
     bio = '#{@bio}',
-    capacity_for_animals = '#{@capacity_for_animals}',
+    capacity_for_animals = #{@capacity_for_animals},
     looking_for = '#{@looking_for}',
     profile_picture = '#{@profile_picture}'
     WHERE id = '#{@id}'"

@@ -45,11 +45,13 @@
   <td><form action="/animals/<%= @animal.id %>/edit" method="get">
     <input class="btn" type="submit" value="edit" />
   </form></td>
+  <% if @animal.adopted == "No" %>
   <td>|</td>
   <td>  <form action="/animals/<%= @animal.id %>/delete" method="POST">
     <input class="btn" type="submit" value="delete" />
   </form></td>
   <td>|</td>
+  <% end %>
 </tr>
 
 </table>
