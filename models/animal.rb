@@ -63,7 +63,7 @@ class Animal
   end
 
   def return_to_shelter()
-    @adopted = "No"
+    @adopted = ''
     @ready_for_adoption = "Yes"
   end
 

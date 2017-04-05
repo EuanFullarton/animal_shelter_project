@@ -26,13 +26,13 @@
         <% if @animal.adopted == "Yes" %>
         <td><%= @animal.unavailable %></td>
         <% else %>
-        <td class = "ready"><%= @animal.ready_for_adoption %></td>
+        <td class = "col_one"><%= @animal.ready_for_adoption %></td>
         <%end %>
     </tr>
     <tr>
         <th>Adopted?</th>
         <th></th>
-        <td class = "adopted"><%= @animal.adopted %></td>
+        <td class = "col_two"><%= @animal.adopted %></td>
     </tr>
     <tr>
         <th>Owner:</th>

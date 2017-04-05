@@ -43,10 +43,10 @@
     <% if animal.adopted == "Yes" %>
     <td><%= animal.unavailable %></td>
     <% else %>
-    <td class = "ready"><%= animal.ready_for_adoption %></td>
+    <td class = "col_one"><%= animal.ready_for_adoption %></td>
     <%end %>
     <td>|</td>
-    <td class = "adopted"><%= animal.adopted %></td>
+    <td class = "col_two"><%= animal.adopted %></td>
     <td>|</td>
     <% if animal.adopted == "Yes" %>
     <td><%= animal.adoption.adoption_date %></td>
